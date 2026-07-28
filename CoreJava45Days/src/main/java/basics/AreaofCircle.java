@@ -13,13 +13,21 @@ public class AreaofCircle {
 	 System.out.println("Enter the radius of circle");
 	 double r=scan.nextDouble();
 	 final double PI=3.14;
-	 double area=PI* (r*r);
-	 System.out.println("=========================");
-	 System.out.println("Area of Circle  ");
-	 System.out.println("=========================");
-	 System.out.println("Radius :"+r);
-	 System.out.println("PI Value :"+PI);
-	 System.out.println("Area of Circle is :"+area);
+	 double area;
+	if (r>0) {
+	  area=PI* (r*r);
+	  System.out.println("=========================");
+		 System.out.println("Area of Circle  ");
+		 System.out.println("=========================");
+		 System.out.println("Radius :"+r);
+		 System.out.println("PI Value :"+PI);
+		 System.out.println("Area of Circle is :"+area);
+	}
+	else {
+		System.out.println("We cant find the area of circle with radius less tha or equal to 0");
+	}
+		
+	 
 	}
 
 }
