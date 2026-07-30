@@ -16,15 +16,16 @@ Scanner scan=new Scanner(System.in);
 		System.out.println("===================================");
 		System.out.println("Voting Eligibility ");
 		System.out.println("===================================");
+		
+		System.out.println("Name :"+name);
+		System.out.println("Age :" +age);
+		
 		if(age>=18&&age<=100) {
-			System.out.println("Name :"+name);
-			System.out.println("Age :" +age);
 			System.out.println("Congratulations "+name+" !");
 			System.out.println("Your are eligible to vote ");
 		}
 		else if(age>0&&age<18) {
-			System.out.println("Name :"+name);
-			System.out.println("Age :" +age);
+			
 			System.out.println("Sorry "+name+"!");
 			System.out.println("You are not eligible to vote , you can vote after "+(18-age) +" years ");
 		}
