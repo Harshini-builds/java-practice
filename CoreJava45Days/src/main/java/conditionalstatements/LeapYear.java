@@ -6,7 +6,7 @@ package conditionalstatements;
 import java.util.Scanner;
 public class LeapYear {
 	Scanner scan=new Scanner(System.in);
-	public void leapYearorNot() {
+	public void checkLeapYear() {
 		System.out.println("Enter year ");
 		int year=scan.nextInt();
 		
@@ -25,7 +25,7 @@ public class LeapYear {
 	
 	public static void main(String[] args) {
 		LeapYear leapyear=new LeapYear();
-		leapyear.leapYearorNot();
+		leapyear.checkLeapYear();
 
 	}
 
