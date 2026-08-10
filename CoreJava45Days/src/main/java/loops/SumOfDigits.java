@@ -14,7 +14,7 @@ Scanner scan=new Scanner(System.in);
 			sum+=number%10;
 			number=number/10;
 		}
-	 System.out.println("Sum of digits in a given number :"+sum);
+	System.out.println("Sum of digits in a given number :"+sum);
 		scan.close();
 	}
 	public static void main(String[] args) {
