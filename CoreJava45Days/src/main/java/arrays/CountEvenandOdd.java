@@ -1,5 +1,8 @@
 package arrays;
 
+/*
+ * Program:To print count of even and odd numbers in given array
+ */
 import java.util.Scanner;
 
 public class CountEvenandOdd {
@@ -23,7 +26,7 @@ public class CountEvenandOdd {
 	    	odd_count++;
 	    	}
 	    }
-	    System.out.println("Even numbers count in :"+ even_count +" and Odd number "+odd_count);
+	    System.out.println("Even numbers count in :"+ even_count +" \nOdd numbers count :"+odd_count);
 	  
 	}
 	
