@@ -14,7 +14,7 @@ public class FindDuplicates {
 	    	arr[i]=Integer.parseInt(scan.nextLine());
 	    }
 	    HashSet<Integer> uniqueelements=new HashSet<Integer>();
-	    System.out.println("Duplicate elements :");
+	    System.out.print("Duplicate elements :");
 	    for(int i=0;i<arr_length;i++) {
 	    if(!(uniqueelements.contains(arr[i]))) {
 	    	uniqueelements.add(arr[i]);
