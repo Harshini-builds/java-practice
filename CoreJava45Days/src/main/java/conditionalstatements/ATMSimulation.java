@@ -7,31 +7,32 @@ import java.util.Scanner;
 
 public class ATMSimulation {
 	Scanner scan=new Scanner(System.in);
-public static double balance=1000;
+public static double intial_balance=1000;// same Intial balance 
+private double balance=intial_balance;
 public void greet() {
 	System.out.println("Welcome to v-Bank ");
 	System.out.println("Select the bank operations and enter the options ");
-	ATMSimulation atmSimulation1=new ATMSimulation ();
+	
 	while(true) {
 		System.out.println("1.CheckBalance \n2.Deposit \n3.WithDraw \n4.Exit");
 		int option=scan.nextInt();
 		switch(option) {
 		case 1:
 			System.out.println("=============================");
-			atmSimulation1.checkBalance();
+			this.checkBalance();
 			System.out.println("=============================");
 			break;
 		case 2:
 		
-			System.out.println("Total Balance after depositing  : ₹"+atmSimulation1.deposit());
+			System.out.println("Total Balance after depositing  : ₹"+this.deposit());
 			
 			break;
 		case 3:
 			
-			System.out.println("Total Balance after withdraw :₹"+atmSimulation1.withDrawal());
+			System.out.println("Total Balance after withdraw :₹"+this.withDrawal());
 			break;
 		case 4:
-			System.out.println("Thank you for visiting our portal !!!");
+			System.out.println("Thank you for visiting V-Bank portal !!!");
 			System.exit(0);
 			break;
 			default:
@@ -55,8 +56,12 @@ public double deposit() {
 public double withDrawal() {
 	System.out.println("Enter the amount that you want to withdraw");
 	double amount=scan.nextDouble();
+	try {
+		if(amount<=0) {
+			throw new ArithmeticException("Enter Valid Amount!!!");
+		}
 	if(amount>balance) {
-		System.out.println("Withdraw failed due to insufficent funds ! Please check and re-enter correct amount");
+		throw new ArithmeticException("Insufficient Funds!!!");
 	}
 	else {
 	balance=balance-amount;
@@ -64,6 +69,11 @@ public double withDrawal() {
 	System.out.println("Amount successfully  withdraw from your account : ₹"+amount);
 	System.out.println("=============================");
 	
+	}
+	
+	}
+	catch(Exception e) {
+		System.out.println("Withdraw failed due to insufficent funds ! Please check and re-enter correct amount");
 	}
 	return balance;
 }
